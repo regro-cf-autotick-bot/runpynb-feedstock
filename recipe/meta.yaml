@@ -1,18 +1,18 @@
 {% set name = "runpynb" %}
-{% set version = "0.1.1" %}
+{% set version = "0.1.4" %}
 
 package:
-  name: "{{ name|lower }}"
-  version: "{{ version }}"
+  name: {{ name|lower }}
+  version: {{ version }}
 
 source:
-  url: "https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz"
-  sha256: d276beb7ecaf92d7bbf4335e071343d3546afb36b8764a169a62eea8d48bc3dd
+  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: ff5627a46bc8b21d1a82d64f56c86e61d2d21fe54cd462f116cc9a602b7da171
 
 build:
   number: 0
   noarch: python
-  script: "{{ PYTHON }} -m pip install . -vv"
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -28,13 +28,13 @@ test:
     - runpynb
 
 about:
-  home: "https://github.com/lsys/runPyNB"
+  home: https://github.com/lsys/runPyNB
   license: MIT
   license_family: MIT
   license_file: LICENSE
-  summary: "Run (and time) Jupyter Notebooks for command-line and makefile"
-  doc_url: "http://runpynb.rtfd.io/"
-  dev_url: "https://github.com/lsys/runPyNB"
+  summary: Run (and time) Jupyter Notebooks for command-line and makefile
+  doc_url: http://runpynb.rtfd.io/
+  dev_url: https://github.com/lsys/runPyNB
 
 extra:
   recipe-maintainers:
