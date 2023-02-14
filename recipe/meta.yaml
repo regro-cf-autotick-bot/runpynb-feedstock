@@ -1,5 +1,5 @@
 {% set name = "runpynb" %}
-{% set version = "0.1.4" %}
+{% set version = "0.2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: ff5627a46bc8b21d1a82d64f56c86e61d2d21fe54cd462f116cc9a602b7da171
+  sha256: 46aa74433456eb14fb5738bd259024e979e4d9472d9c1984eb66d8f085676962
 
 build:
   number: 0
